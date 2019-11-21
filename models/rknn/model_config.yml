@@ -1,0 +1,14 @@
+project-name: centerface
+models:
+  centerface:
+    platform: caffe
+    prototxt_file_path: centerface.prototxt
+    caffemodel_file_path: centerface.caffemodel
+    quantize: True
+    source: text
+    dataset: dataset.txt
+    configs:
+      quantized_dtype: asymmetric_quantized-u8
+      batch_size: 1
+      channel_mean_value: 0 0 0 1
+      reorder_channel: 0 1 2

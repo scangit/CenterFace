@@ -48,7 +48,9 @@ def test_image():
             cv2.circle(frame, (int(lm[4]), int(lm[5])), 2, (0, 0, 255), -1)
             cv2.circle(frame, (int(lm[6]), int(lm[7])), 2, (0, 0, 255), -1)
             cv2.circle(frame, (int(lm[8]), int(lm[9])), 2, (0, 0, 255), -1)
-    cv2.imshow('out', frame)
+    
+    print('python face num:', len(dets))
+    cv2.imshow('python', frame)
     cv2.waitKey(0)
 
 
